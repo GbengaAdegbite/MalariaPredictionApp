@@ -132,26 +132,24 @@ echo "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www
     $simulations_dR_mod = array();
     $simulations_dD_mod = array();
     
-  // Please uncomment the next input statements for Variables T, S, V, E if you want to get their initial simulation data values via the web form     
+      
 	
-	//$T  = $_POST['travellers']; //This is where we take the number of Travellers  e.g. 70000;
-	//$S = $_POST['susceptible']; //This is where we take the number of Susceptible  e.g. 5000;
-	//$V = $_POST['vigilant']; //This is where we take the number of  the Vigilant Humans  e.g. 55000;
-	//$E = $_POST['exposed']; //This is where we take the number of the Exposed Humans  e.g. 10000;
-    
-    $T = 6102;
-    $S = 3869;
-    $V = 2233; 
-	$E = 213;
+	$T  = $_POST['travellers']; //This is where we take the number of Travellers  e.g. 70000;
+	$S = $_POST['susceptible']; //This is where we take the number of Susceptible  e.g. 5000;
+	$V = $_POST['vigilant']; //This is where we take the number of  the Vigilant Humans  e.g. 55000;
+	$E = $_POST['exposed']; //This is where we take the number of the Exposed Humans  e.g. 10000;
+    $VL = $_POST['vigilant1']; //This is where we take the number of the Vigilant Humans that use LLIN  e.g. 10000;
+    $VI = $_POST['vigilant2']; //This is where we take the number of the Vigilant Humans that use IRS  e.g. 10000;
+    $VT= $_POST['vigilant3']; //This is where we take the number of the Vigilant Humans that use traditionl malaria control strategies  e.g. 10000;
 /**
   * Seeding and initializing the data for states I, D, R [Infected, Death, Recovered] to zero.
   * These values change dynamically as the simulation begins 
 */
 	$I = 0;
-	$d = 0;
-	$r = 0;
+	$D = 0;
+	$R = 0;
 	
-	//echo $T. ' - ' . $S . ' - ' . $V . ' - ' . $E . ' - ' . $I . ' - ' . $d . ' - ' . $r;
+	//echo $T. ' - ' . $S . ' - ' . $V . ' - ' . $E . ' - ' . $I . ' - ' . $D . ' - ' . $R;
 	
 /** Here are the parameters for controlling the ODE Modelling Process and Simulations*/
 
