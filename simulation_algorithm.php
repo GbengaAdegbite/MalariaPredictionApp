@@ -326,32 +326,32 @@ for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){
   for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){ 
    
           if($simul_iterative == 0){
-	   $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r + $day_1;
+	   $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r;
         if($dR < 0){ $dR = -($dR);}  
 	    $simulations_dR[0] = floor($dR/1); 
          
 	}
           if($simul_iterative == 1){
-	   $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r + $day_30;
+	   $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r; 
        if($dR < 0){ $dR = -($dR);}
 	   $simulations_dR[1] = floor($dR); 
         
                         
 	}
           if($simul_iterative == 2){
-	   $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r + $day_60;
+	   $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r;
        if($dR < 0){ $dR = -($dR);}
 	   $simulations_dR[2] = floor($dR); 
         
 	}
           if($simul_iterative == 3){
-	   $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r + $day_90;
+	   $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r;
        if($dR < 0){ $dR = -($dR);}
 	   $simulations_dR[3] = floor($dR); 
         
 	} 
           if($simul_iterative == 4){
-	   $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r + $day_120;
+	   $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r;
        if($dR < 0){ $dR = -($dR);}
 	   $simulations_dR[4] = floor($dR); 
         
@@ -438,8 +438,6 @@ for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){
  
   /**This is the Ordinary Differential Equation (ODE) Solver Code Dynamics
 **************This is where the dynamic Simulation is done*****************************
-*/
-//Parameters for low rain
 $gamma = 1; $alpha1 = 0.965; $alpha2 = 0.03; $alpha3 = 0; $c1 = 1; $c2 = 1; $r1 = 0.320; $r2 = 0.1577; $r3 = 0.099;
 $r4 = 1.7326; $r = 0.99977; $d = 0.00023; 
 
@@ -590,32 +588,32 @@ for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){
   for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){ 
    
           if($simul_iterative == 0){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r + $day_1;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r;
         if($dR < 0){ $dR = -($dR);}  
         $simulations_dR_High[0] = floor($dR); 
        
     }
           if($simul_iterative == 1){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r + $day_30;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_High[1] = floor($dR); 
       
                         
     }
           if($simul_iterative == 2){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r + $day_60;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_High[2] = floor($dR); 
       
     }
           if($simul_iterative == 3){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r + $day_90;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_High[3] = floor($dR); 
       
     } 
           if($simul_iterative == 4){
-       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r + $day_120;
+       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_High[4] = floor($dR); 
       
@@ -703,10 +701,8 @@ for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){
   /**This is the Ordinary Differential Equation (ODE) Solver Code Dynamics
 **************This is where the dynamic Simulation is done*****************************
 */
-//Parameters for low rain
 $gamma = 1; $alpha1 = 0.965; $alpha2 = 0.03; $alpha3 = 0; $c1 = 1; $c2 = 1; $r1 = 0.320; $r2 = 0.1577; $r3 = 0.099;
 $r4 = 1.7326; $r = 0.99977; $d = 0.00023;
-
 /** dT compartment Simulations for T*/
    for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){ 
    
@@ -853,32 +849,32 @@ for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){
   for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){ 
    
           if($simul_iterative == 0){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_1 * $r + $day_1;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_1 * $r;
         if($dR < 0){ $dR = -($dR);}  
         $simulations_dR_High80[0] = floor($dR/1); 
         
     }
           if($simul_iterative == 1){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_30 * $r + $day_30;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_30 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_High80[1] = floor($dR); 
       
                         
     }
           if($simul_iterative == 2){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_60 * $r + $day_60;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_60 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_High80[2] = floor($dR); 
       
     }
           if($simul_iterative == 3){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_90 * $r + $day_90;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_90 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_High80[3] = floor($dR); 
       
     } 
           if($simul_iterative == 4){
-       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_120 * $r + $day_120;
+       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_120 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_High80[4] = floor($dR); 
       
@@ -1113,32 +1109,32 @@ for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){
   for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){ 
    
           if($simul_iterative == 0){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_1 * $r + $day_1;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_1 * $r;
         if($dR < 0){ $dR = -($dR);}  
         $simulations_dR_80_low[0] = floor($dR/1); 
          
     }
           if($simul_iterative == 1){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_30 * $r + $day_30;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_30 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_80_low[1] = floor($dR); 
         
                         
     }
           if($simul_iterative == 2){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_60 * $r + $day_60;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_60 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_80_low[2] = floor($dR); 
         
     }
           if($simul_iterative == 3){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_90 * $r + $day_90;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_90 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_80_low[3] = floor($dR); 
         
     } 
           if($simul_iterative == 4){
-       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_120 * $r + $day_120;
+       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S * $day_120 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_80_low[4] = floor($dR); 
         
@@ -1377,32 +1373,32 @@ for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){
   for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){ 
    
           if($simul_iterative == 0){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r + $day_1;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r;
         if($dR < 0){ $dR = -($dR);}  
         $simulations_dR_High98[0] = floor($dR/1); 
         //echo ' <br/> Rh ' .  $simulations_dR_High98[0];  
     }
           if($simul_iterative == 1){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r + $day_30;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_High98[1] = floor($dR); 
         //echo ' <br/> Rh ' .  $simulations_dR_High98[1];
                         
     }
           if($simul_iterative == 2){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r + $day_60;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_High98[2] = floor($dR); 
         //echo ' <br/> Rh ' .  $simulations_dR_High98[2];
     }
           if($simul_iterative == 3){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r + $day_90;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_High98[3] = floor($dR); 
         //echo ' <br/> Rh ' .  $simulations_dR_High98[3];
     } 
           if($simul_iterative == 4){
-       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r + $day_120;
+       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_High98[4] = floor($dR); 
         //echo ' <br/> Rh ' .  $simulations_dR_High98[4];
@@ -1637,32 +1633,32 @@ for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){
   for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){ 
    
           if($simul_iterative == 0){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r + $day_1;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r;
         if($dR < 0){ $dR = -($dR);}  
         $simulations_dR_98_low[0] = floor($dR/1); 
         //echo ' <br/> R ' .  $simulations_dR_98_low[0];  
     }
           if($simul_iterative == 1){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r + $day_30;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_98_low[1] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_98_low[1];
                         
     }
           if($simul_iterative == 2){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r + $day_60;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_98_low[2] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_98_low[2];
     }
           if($simul_iterative == 3){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r + $day_90;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_98_low[3] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_98_low[3];
     } 
           if($simul_iterative == 4){
-       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r + $day_120;
+       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_98_low[4] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_98_low[4];
@@ -1902,32 +1898,32 @@ for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){
   for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){ 
    
           if($simul_iterative == 0){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r + $day_1;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r;
         if($dR < 0){ $dR = -($dR);}  
         $simulations_dR_mod[0] = floor($dR/1); 
         //echo ' <br/> R ' .  $simulations_dR_mod[0];  
     }
           if($simul_iterative == 1){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r + $day_30;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_mod[1] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_mod[1];
                         
     }
           if($simul_iterative == 2){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r + $day_60;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_mod[2] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_mod[2];
     }
           if($simul_iterative == 3){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r + $day_90;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_mod[3] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_mod[3];
     } 
           if($simul_iterative == 4){
-       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r + $day_120;
+       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_mod[4] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_mod[4];
@@ -2167,32 +2163,32 @@ for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){
   for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){ 
    
           if($simul_iterative == 0){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r + $day_1;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r;
         if($dR < 0){ $dR = -($dR);}  
         $simulations_dR_98_mod[0] = floor($dR/1); 
         //echo ' <br/> R ' .  $simulations_dR_98_mod[0];  
     }
           if($simul_iterative == 1){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r + $day_30;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_98_mod[1] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_98_mod[1];
                         
     }
           if($simul_iterative == 2){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r + $day_60;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_98_mod[2] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_98_mod[2];
     }
           if($simul_iterative == 3){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r + $day_90;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_98_mod[3] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_98_mod[3];
     } 
-          if($simul_iterative == 4){
-       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r + $day_120;
+          if($simul_iterative == 4){                                                  
+       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_98_mod[4] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_98_mod[4];
@@ -2432,32 +2428,32 @@ for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){
   for($simul_iterative = 0; $simul_iterative < 5; $simul_iterative++){ 
    
           if($simul_iterative == 0){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r + $day_1;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_1 * $r;
         if($dR < 0){ $dR = -($dR);}  
         $simulations_dR_80_mod[0] = floor($dR/1); 
         //echo ' <br/> R ' .  $simulations_dR_80_mod[0];  
     }
           if($simul_iterative == 1){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r + $day_30;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_30 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_80_mod[1] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_80_mod[1];
                         
     }
           if($simul_iterative == 2){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r + $day_60;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_60 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_80_mod[2] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_80_mod[2];
     }
           if($simul_iterative == 3){
-       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r + $day_90;
+       $dR = $gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_90 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_80_mod[3] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_80_mod[3];
     } 
           if($simul_iterative == 4){
-       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r + $day_120;
+       $dR =$gamma * $E - $I * $r - $I * $d + $alpha3 * $T + $c1 * $S  * $day_120 * $r;
        if($dR < 0){ $dR = -($dR);}
        $simulations_dR_80_mod[4] = floor($dR); 
         //echo ' <br/> R ' .  $simulations_dR_80_mod[4];
